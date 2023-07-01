@@ -1,0 +1,9 @@
+# OS X
+.DS_Store
+
+# Xcode
+# Regarding Xcode 9 and newer, the only line you really need in your .gitignore is:
+xcuserdata/
+
+# self-define
+build/
