@@ -116,7 +116,7 @@ public final class Connection {
         let libsimple = true
         if libsimple{
             try check(sqlite3_enable_load_extension(_handle, 1))
-            //print("sqlite3_enable_load_extension done.")
+            print("sqlite3_enable_load_extension done.")
 //            log.debug("sqlite3_enable_load_extension done.")
             
             //let url = Bundle.module.url(forResource: "libsimple-osx-x64/libsimple", withExtension: "dylib")
