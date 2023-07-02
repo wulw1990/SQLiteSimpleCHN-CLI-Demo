@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "SQLiteSimpleCHN",
             dependencies: ["SQLite3Framework"],
-            resources: [.process("Resources")]),
+            resources: [.copy("Resources")]),
         .binaryTarget(
                     name: "SQLite3Framework",
                     path: "SQLite3Framework.xcframework"),

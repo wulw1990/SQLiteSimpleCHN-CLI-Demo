@@ -117,11 +117,28 @@ public final class Connection {
         if libsimple{
             try check(sqlite3_enable_load_extension(_handle, 1))
             print("sqlite3_enable_load_extension done.")
-//            log.debug("sqlite3_enable_load_extension done.")
+
+            let url = Bundle.module.url(forResource: "Resources/libsimple-osx-x64/libsimple.dylib", withExtension: nil)
+            print("url: \(url!.absoluteString)")
             
-            //let url = Bundle.module.url(forResource: "libsimple-osx-x64/libsimple", withExtension: "dylib")
+//            try check(sqlite3_load_extension(_handle, url!.absoluteString, "sqlite3_simple_init", nil))
+//            try check(sqlite3_load_extension(_handle, url!.absoluteString, nil, nil))
+//            print("xxx")
+//            try check(sqlite3_load_extension(_handle, "xxx", nil, nil))
             
-            //try check(sqlite3_load_extension(_handle, url?.absoluteString, nil, nil))
+//            let ret = sqlite3_load_extension(_handle, url!.absoluteString, nil, nil)
+//            print("ret: \(ret)")
+//            if ret == SQLITE_OK{
+//                print("Successfully loaded extension")
+//            }else{
+//                if let error = sqlite3_errmsg(_handle) {
+//                        let errorMessage = String(cString: error)
+//                        print("Failed to load extension: \(errorMessage)")
+//                    } else {
+//                        print("Failed to load extension")
+//                    }
+//            }
+            
 
         }
 #endif
